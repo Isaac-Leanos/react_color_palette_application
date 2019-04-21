@@ -6,12 +6,13 @@ import "./ColorBox.css";
 const ColorBox = ({name, background})=>{
     return (
         <div style={{background: background}} className="color-box">
-            <div className="copy-container"></div>
-            <div className="box-content">
-                <span>{name}</span>
+            <div className="copy-container">
+                <div className="box-content">
+                    <span>{name}</span>
+                </div>
+                <button className="copy-button">Copy</button>
             </div>
-            <button className="copy-button">Copy</button>
-            <span>More</span>
+            <span className="see-more">More</span>
         </div>
     )
 }
