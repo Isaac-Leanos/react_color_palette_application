@@ -24,6 +24,7 @@ export default [
         { name: "grey", color: "#9E9E9E" },
         { name: "bluegrey", color: "#607D8B" }
       ]
+      
     },
     {
       paletteName: "Flat UI Colors v1",
