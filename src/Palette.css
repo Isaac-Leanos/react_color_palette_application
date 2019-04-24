@@ -1,7 +1,9 @@
 .palette {
     height: 100vh;
+    border: 1px solid black;
 }
 
 .palette-colors {
     height: 90%;
+    border: 1px solid red;
 }

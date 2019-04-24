@@ -30,6 +30,7 @@
 .color-box:hover .copy-button{
     opacity: 1;
     transition: 0.5s ease-out;
+    cursor: pointer;
 }
 
 .box-content {
