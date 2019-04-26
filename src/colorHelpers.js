@@ -8,7 +8,7 @@ const levels = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 // mutate colors 
 export const generatePalette = (initial)=>{
-    let newPalette = {
+    const newPalette = {
         paletteName: initial.paletteName,
         id: initial.id,
         emoji: initial.emoji,
@@ -33,7 +33,7 @@ export const generatePalette = (initial)=>{
                 name: `${color.name} ${levels[i]}`, // red 50
                 id: color.name.toLowerCase().replace(/ /g, "-"), // replace space globally with a dash
                 hex: s,
-                rgb: chroma(color).css(), // .css returns rgb value 
+                rgb: chroma(s).css(), // .css returns rgb value 
                 rgba: chroma(s).css().replace("rgb", "rgba").replace(")", ",1.0)") // .css returns rgb value 
             })
         });
