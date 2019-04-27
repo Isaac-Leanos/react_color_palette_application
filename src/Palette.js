@@ -1,38 +1,26 @@
 import React, {useState} from "react";
 import ColorBox from "./ColorBox";
 import "./Palette.css";
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
+import Navbar from "./Navbar";
 
 
 const Pallete = (props)=>{
-    const {colors} = props.palette;
+    const {colors, id, emoji, paletteName} = props.palette;
+
     const [level, setLevel] = useState(500);
+    console.log(props.palette);
 
     const colorBoxes = colors[level].map(color =>{
         return <ColorBox background={color.hex} name={color.name} />
     })
 
     const changeLevel = (L)=>{
-        console.log(L)
         setLevel(L);
     }
-
-    const marks = {
-        100: '',
-        200: "",
-        300: '',
-        400: '',
-        500: '',
-        600: '',
-        700: '',
-        800: '',
-        900: '',
-      };
-
+    
     return (
         <div className="palette" >
-            <Slider defaultValue={level} min={100} max={900} onAfterChange={changeLevel} step={100} marks={marks} />
+            <Navbar level={level} changeLevel={changeLevel}></Navbar>
             <div className="palette-colors">{colorBoxes}</div>
         </div>
     )
