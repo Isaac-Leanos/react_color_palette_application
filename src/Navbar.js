@@ -56,7 +56,7 @@ const Navbar = (props)=>{
                 </Select>
             </div>
             <Snackbar anchorOrigin={{ vertical: "bottom", horizontal:"left" }} open={open} 
-                      autoHideDuration="3000" ContentProps={{'aria-describedby': 'message-id'}}
+                      autoHideDuration={3000} ContentProps={{'aria-describedby': 'message-id'}}
                       message={<span id="message-id">format changed to {format.toLocaleUpperCase() } </span>}
                       action={[
                           <IconButton onClick={closeSnackbar} color="inherit">
