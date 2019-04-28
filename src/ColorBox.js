@@ -3,6 +3,8 @@ import "./ColorBox.css";
 import {CopyToClipboard} from "react-copy-to-clipboard"; // copy color hexcode to clipboard
 
 
+
+
 const ColorBox = ({name, background})=>{
     const [copied, setCopied] = useState(false);
     const changeCopyState = ()=>{
