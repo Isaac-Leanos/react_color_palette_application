@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 
 const Pallete = (props)=>{
-    const {colors, name, emoji, paletteName} = props.palette;
+    const {colors, id, emoji, paletteName} = props.palette;
 
     //states
     const [level, setLevel] = useState(500);

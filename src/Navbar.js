@@ -5,6 +5,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import "rc-slider/assets/index.css";
 import Slider from "rc-slider";
 import "./Navbar.css";
+import {Link} from"react-router-dom";
 
 
 const Navbar = (props)=>{
@@ -39,7 +40,7 @@ const Navbar = (props)=>{
     return (
         <header className="navbar">
             <div className="logo">
-                <a href="#">React color picker</a>
+                <Link to={"/"}><a href="#">React color picker</a></Link>
             </div>
 
             <div className="slider-container">
