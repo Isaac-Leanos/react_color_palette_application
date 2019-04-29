@@ -1,21 +1,21 @@
 import React, {  } from 'react';
-import "./PaletteList.css";
-import Palette from "./Palette";
-import seedColors from "./seedColors";
-import {generatePalette} from "./colorHelpers";
-import {Route, Switch} from "react-router-dom";
 import {Link} from "react-router-dom";
+import MiniPalette from "./MiniPalette";
+import { withStyles} from "@material-ui/styles";
+
+
 
 
 // homescreen 
 const PaletteList = ({palettes})=>{
-        
       return (
-        <div className="palette-list">
+          <div>
+          <MiniPalette/>
             {palettes.map(pal=>(
-                <Link to={`/palette/${pal.id}`}>
-                    <h1>{pal.paletteName}</h1>
-                </Link>
+                    <Link to={`/palette/${pal.id}`}>
+                        <h1>{pal.paletteName}</h1>
+                    </Link>
+                // </MiniPalette>
             ))}
         </div>
     )
