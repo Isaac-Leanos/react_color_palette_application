@@ -5,12 +5,14 @@ import { withStyles} from "@material-ui/styles";
 
 const styles = {
     root: {
-        background: "blue",
+        background: "#b3d8fb",
         height: "100vh",
         display: "flex",
-        // alignItems: "center", 
         alignItems: "flex-start", 
-        justifyContent: "center"
+        alignItems: "flex-start", 
+        justifyContent: "center",
+        overflow: "hidden"
+
     },
     container: {
         border: "1px solid red",

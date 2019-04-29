@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 
 
 import { withStyles} from "@material-ui/styles";
+import { relative } from "path";
 
 const styles = {
     root: {
@@ -14,10 +15,13 @@ const styles = {
         "&:hover": {
             cursor: "pointer"
         },
-        // overflow: "hidden"
     },
     colors: {
-        background: "grey"
+        background: "black",
+        height: "120px",
+        width: "100%",
+        borderRadius: "5px",
+        overflow: "hidden"
     },
     title: {
         display: "flex",
@@ -28,19 +32,35 @@ const styles = {
         paddingTop: "0.5rem",
         fontSize: "1rem",
         position: "relative",
+        height: "34px"
     },
     emoji: {
         marginLeft: "0.5rem",
-        fontSize: "1.5rem"
-    }
+        fontSize: "1rem"
+    },
+    miniBoxes: {
+        height: "25%",
+        width: "20%",
+        display: "inline-block",
+        margin: "0 auto",
+        position: "relative",
+        marginBottom: "-4px",
+    },
+    
+  
 }
 
 
 const MiniPalette = ({classes, id, paletteName, emoji, colors})=>{
+
+    const miniBoxes = colors.map( col => (
+        <div className={classes.miniBoxes} style={{backgroundColor: `${col.color}`}} key={col.name}></div>
+    ))
+
     return (
         <div className={classes.root}>
-            <div className={classes.colors}></div>
-            <h5 className={classes.title}>{paletteName} <span className={classes.emoji}>{emoji}</span></h5>
+            <div className={classes.colors}>{miniBoxes}</div>
+            <h5 className={classes.title}>{paletteName} <span className={classes.emoji}>-{emoji}</span></h5>
         </div>
     )
 }
