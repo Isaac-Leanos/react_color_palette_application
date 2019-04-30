@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import { withStyles} from "@material-ui/styles";
 import { relative } from "path";
 
+
 const styles = {
     root: {
         background: "white",
@@ -51,14 +52,19 @@ const styles = {
 }
 
 
-const MiniPalette = ({classes, id, paletteName, emoji, colors})=>{
+const MiniPalette = ({classes, id, paletteName, emoji, colors, history})=>{
 
     const miniBoxes = colors.map( col => (
         <div className={classes.miniBoxes} style={{backgroundColor: `${col.color}`}} key={col.name}></div>
     ))
 
+    const goToPage = (paletteID)=>{
+        console.log('called?')
+        history.push(`/palette/${paletteID}`)
+    }
+
     return (
-        <div className={classes.root}>
+        <div className={classes.root} onClick={()=>{goToPage(id)} }>
             <div className={classes.colors}>{miniBoxes}</div>
             <h5 className={classes.title}>{paletteName} <span className={classes.emoji}>-{emoji}</span></h5>
         </div>

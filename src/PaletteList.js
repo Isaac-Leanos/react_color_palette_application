@@ -38,7 +38,8 @@ const styles = {
 
 
 // homescreen 
-const PaletteList = ({palettes, classes})=>{
+const PaletteList = ({palettes, classes, history})=>{
+      
       return (
           <div className={classes.root}>
 
@@ -47,7 +48,7 @@ const PaletteList = ({palettes, classes})=>{
                 <nav className={classes.nav}><h1>React Color Palettes</h1></nav>
                 <div className={classes.miniPalettes}>
                     {palettes.map(pal=>(
-                        <MiniPalette {...pal}></MiniPalette>
+                        <MiniPalette {...pal} history={history}></MiniPalette>
                     ))}
                 </div>
             </div>

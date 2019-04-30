@@ -18,7 +18,7 @@ const App = ()=>{
       return (
         <Switch>
           {/* route 1 */}
-          <Route exact path="/" render={ ()=> <PaletteList palettes={seedColors}></PaletteList>  } 
+          <Route exact path="/" render={ (myRouteProps)=> <PaletteList palettes={seedColors} {...myRouteProps}></PaletteList>  } // differenc ebetween render & component attr
           />
           {/* route 2 */}
           <Route exact path="/palette/:id" 
