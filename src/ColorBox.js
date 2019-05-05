@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import "./ColorBox.css";
 import {CopyToClipboard} from "react-copy-to-clipboard"; // copy color hexcode to clipboard
+import {Link} from "react-router-dom"
 
 
 
 
-const ColorBox = ({name, background})=>{
+const ColorBox = ({name, background, moreURL, showLink})=>{ 
     const [copied, setCopied] = useState(false);
     const changeCopyState = ()=>{
         setCopied(true);
@@ -27,7 +28,10 @@ const ColorBox = ({name, background})=>{
                     </div>
                     <button className="copy-button">Copy</button>
                 </div>
-                <span className="see-more">More</span>
+                {showLink && (
+                <Link to={moreURL} onClick={e=>e.stopPropagation()}>
+                    <span className="see-more">More</span>
+                </Link>)}
             </div>
         </CopyToClipboard>
     )

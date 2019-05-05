@@ -7,6 +7,7 @@
     cursor: pointer;
     margin-bottom: -4px;
     text-transform: uppercase;
+    /* border: 1px solid black; */
 }
 
 .copy-button {

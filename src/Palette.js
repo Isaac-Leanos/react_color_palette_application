@@ -5,22 +5,22 @@ import Navbar from "./Navbar";
 
 
 const Pallete = (props)=>{
-    const {colors, id, emoji, paletteName} = props.palette;
+    const {colors, id, emoji, paletteName} = props.palette; // muted colors object
 
     //states
     const [level, setLevel] = useState(500);
     const [format, setFormat] = useState("hex");
-    console.log(props.palette);
+    console.log(':)))))',props.palette);
 
     const colorBoxes = colors[level].map(color =>{
-        return <ColorBox key={color.id} background={color[format]} name={color.name} />
+        return <ColorBox key={color.id} background={color[format]} name={color.name} moreURL={`/palette/${id}/${color.id}`} showLink={true}/>
     })
 
     const changeLevel = (L)=>{
         setLevel(L);
     }
     
-    const changeFormat =(val)=>{
+    const changeFormat = (val)=>{
         setFormat(val);
     }
 

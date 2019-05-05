@@ -39,7 +39,7 @@ const styles = {
 
 // homescreen 
 const PaletteList = ({palettes, classes, history})=>{
-      
+      console.log('######',palettes)
       return (
           <div className={classes.root}>
 
