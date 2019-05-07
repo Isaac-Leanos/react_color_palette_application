@@ -9,7 +9,7 @@ import {Link} from"react-router-dom";
 
 
 const Navbar = (props)=>{
-    const {level, changeLevel, changeFormatUp} = props;
+    const {level, changeLevel, changeFormatUp, showSlider} = props;
 
     // states
     const [format, setFormat] = useState("hex");
@@ -18,7 +18,7 @@ const Navbar = (props)=>{
 
     const marks = {
         100: '',
-        200: "",
+        200: '',
         300: '',
         400: '',
         500: '',
@@ -42,13 +42,14 @@ const Navbar = (props)=>{
             <div className="logo">
                 <Link to={"/"}><a href="#">React color picker</a></Link>
             </div>
-
+                
+            {showSlider && (
             <div className="slider-container">
                 <span>level: {level}</span>
                 <div className="slider">
                     <Slider defaultValue={level} min={100} max={900} onAfterChange={changeLevel} step={100} marks={marks} />
                 </div>                
-            </div>
+            </div> )}
 
             <div className="select-container">
                 <Select value={format} onChange={changeFormat} >

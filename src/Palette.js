@@ -26,7 +26,7 @@ const Pallete = (props)=>{
 
     return (
         <div className="palette" >
-            <Navbar level={level} changeLevel={changeLevel} changeFormatUp={changeFormat}/>
+            <Navbar level={level} changeLevel={changeLevel} changeFormatUp={changeFormat} showSlider={true}/>
             <div className="palette-colors">{colorBoxes}</div>
             <footer className="palette-footer">
                 {paletteName}

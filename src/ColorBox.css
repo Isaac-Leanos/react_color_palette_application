@@ -10,7 +10,7 @@
     /* border: 1px solid black; */
 }
 
-.copy-button {
+.copy-button, .go-back-a {
     width: 100px;
     height: 30px;
     position: absolute;
@@ -25,9 +25,12 @@
     line-height: 30px;
     color: white;
     border: none;
+    opacity: 1;
+    text-decoration: none;
+}
+.copy-button {
     opacity: 0;
 }
-
 .color-box:hover .copy-button { /* when color-box is hovered on, apply these styles to copy-button */
     opacity: 1;
     transition: 0.5s ease-out;
@@ -44,7 +47,12 @@
     letter-spacing: 1px;
     font-size: 0.8rem;
 }
-
+.light-text {
+    color: white;
+}
+.color-box .dark-text {
+    color: rgba(0, 0, 0, 0.801);
+}
 .see-more {
     background: rgba(255, 255, 255, 0.3);
     position: absolute;
@@ -89,3 +97,11 @@
     text-shadow: 1px 1px 2px red, 0 0 1em black, 0 0 0.2em blue;
 }
 
+.single-color-palette .color-box{
+    height: 50%;
+}
+
+.color-box.go-back {
+    background: black;
+    /* display: inline; */
+}

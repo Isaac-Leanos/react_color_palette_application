@@ -1,12 +1,12 @@
 .palette {
     height: 100vh;
     /* display: flex;
-    flex-direction: column; */
-    /* border: 1px solid red; */
+    flex-direction: column;  */
 }
 
 .palette-colors {
     height: 90%;
+    /* border: 1px solid red; */
 }
 
 
@@ -19,7 +19,7 @@
     font-weight: bold;
     padding-top: 5px;
     padding-right: 29px;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
 }
 
 .palette-footer span {
